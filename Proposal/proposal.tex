@@ -1,0 +1,63 @@
+\documentclass{llncs}
+
+\title{CSCI-548 Project Proposal}
+\author{Lu Zhen, Yilei Qian, Chao Wang}
+\institute{University of Southern California}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We propose a mashup system that provides useful housing information in Los Angeles. In our proposed system, we not only provides traditional mashup of the housing address and online maps, but also integrates crime reports, public traffic and local business information to help users evaluate the living environment.   
+\end{abstract}
+
+
+\section{Background}
+
+When it comes to looking for housing, the famous online classified advertisements website, Craiglist\texttrademark, may be one of the best source to find information. Due to the simplicity and inconvenience of Craiglist, many mashup websites, including HousingMaps, MapsKrieg and MapCraigs, have been established to mash up Craiglist with other online maps, which facilitates users to find housing.
+Although these works is impressing, price and location is not the only factor people will care. The safety and convenience is also important for most of housing finders. 
+
+
+\section{Goal}
+
+For the above sake, we propose a mashup system that provides more useful housing information in Los Angeles. In our proposed system, we not only provides traditional mashup of the housing address and online map, but also integrates other information such as crime reports, public traffic and local business (eg. groceries, restaurants) to help users evaluate the living environment around.Further, we will use artificial intelligence techniques to build an intelligent filter to filtrate housing by safety and convenience. 
+
+
+\section{Data Sources}
+
+The data sources we planned to mash into our system: 
+\begin{description}
+  \item[Housing] Craiglist\footnote{http://losangeles.craigslist.org/apa/}
+  \item[Maps] Google Maps\footnote{http://code.google.com/apis/maps/}
+  \item[Crime Reports]  Crime Mapping\footnote{http://www.crimemapping.com/}
+  \item[Public Traffic]  Metro\footnote{http://developer.metro.net/}, \ldots
+  \item[Local Business]  Yelp\footnote{http://www.yelp.com/developers/}, Google Place\footnote{http://places.google.com/}, \ldots
+\end{description}
+
+
+\section{Methods}
+
+Our basic work flow is described as follows:
+\begin{enumerate}
+  \item Extract related information from the above data sources
+  \item Clean and normalize the extracted data
+  \item Use Geocoding to convert street address to geographic coordinates
+  \item Mapping the geographic coordinates onto Google Maps
+\end{enumerate}
+
+
+\section{More Magic}
+
+Rather than simply display all information on the map, we planned to apply more sophisticated unsupervised learning techniques to rank the safety and convenience index based on the crime reports, public traffic and local business. Then we associate the index with the house in the area in order to facilitate users to evaluate the living environment beyond the information obtained from the original house advertisement. We can also try to utilize some data mining methods to dig the underlying relation between certain region and price or any other interesting relation.
+
+
+
+
+
+%\begin{thebibliography}{}
+%\end{thebibliography}
+
+
+\end{document}
